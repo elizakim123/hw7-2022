@@ -25,15 +25,14 @@ document.querySelector("#pause").addEventListener("click", function() {
 
 document.querySelector("#slower").addEventListener('#click', function(){
 	console.log("Slow Video Down");
-	video.playbackRate *= 0.9;
+	video.playbackRate *= 0.9
 	console.log("Speed is " + video.playbackRate);
-} 
-);
+});
 
 document.querySelector("#faster").addEventListener("#click", function() {
 	console.log("Speed Video Up");
-	video.playbackRate /= 0.9;
-	console.log("Speed is" + video.playbackRate);
+	video.playbackRate /= 0.9
+	console.log("Speed is " + video.playbackRate);
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
