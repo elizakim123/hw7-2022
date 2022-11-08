@@ -39,11 +39,11 @@ document.querySelector("#faster").addEventListener("#click", function() {
 document.querySelector("#skip").addEventListener("click", function() {
 	console.log("Skip ahead 10s");
 	video.currentTime += 10;
-	if (videoPlaybackQuality.currentTime >= video.duration) {
+	if (video.currentTime > video.duration) {
 		video.currentTime = 0;
-		video.play();
+		
 	}
-	console.log("The current time is", video.currentTime)
+	console.log("The current time is" + video.currentTime)
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
@@ -62,7 +62,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 document.querySelector("#slider").addEventListener("click", function() {
 	console.log("The current value is", video.volume)
 	video.volume = this.value/100 
-	let vol= document.querySelector("#volume").innerHTML = this.value + "%";
+	let vol = document.querySelector("#volume").innerHTML = this.value + "%";
 	console.log("The current value is", video.volume)
 	console.log(document.querySelector("#volume"))
 });
